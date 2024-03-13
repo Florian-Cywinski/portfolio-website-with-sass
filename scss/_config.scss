@@ -1,0 +1,16 @@
+// Variables
+$website-width: 1280px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$bg-image: url('../img/showcase.jpg');  /* Since everything is in main.css after compiling, the path is set up accordingly */
+
+// Set Text Color
+@function set-text-color($backgroundColor) {  /* To adapt the text color accordingly (dark or light) when changing the background color (light or dark) */
+  @if (lightness($backgroundColor) > 50) {  /* If the lightness of the background color is greater than 50 % (which means a bright background) */
+    @return #000; /* To give a dark text color back */
+  } @else {
+    @return #fff; /* To give a light text color back */
+  }
+}
