@@ -93,7 +93,7 @@ img {
 
   // Header Inner
   &-inner {
-    background: $bg-image no-repeat 20% 30% / cover;
+    background: $bg-image no-repeat 20% 30% / cover;  /* To just take a part of the whole image as stripe */
     height: 5.5rem;
     border-bottom: 3px solid $main-color;
   }
@@ -387,3 +387,7 @@ img {
     }
   }
 }
+
+
+// Import Media Queries
+@import 'media';
